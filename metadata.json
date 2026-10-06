@@ -1,0 +1,6 @@
+{
+  "name": "BRASA BURGER | Smash Burgers en Buenos Aires",
+  "description": "Artisanal smash burger restaurant from Buenos Aires. Fuego, carne prensada, pan brioche y sabor auténtico.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

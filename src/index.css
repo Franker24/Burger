@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --color-black-pure: #000000;
+  --color-charcoal-deep: #111111;
+  --color-charcoal-card: #F9F9F9;
+  --color-charcoal-subtle: #EBEBEB;
+  --color-monochrome-border: rgba(0, 0, 0, 0.12);
+  --color-white-pure: #FFFFFF;
+  --color-silver-muted: #666666;
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #A3A3A3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes continuousMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes continuousMarqueeReverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-continuous {
+  display: flex;
+  width: max-content;
+  animation: continuousMarquee 28s linear infinite;
+  will-change: transform;
+}
+
+/* New Uiverse.io Cart Button (by vinodjangid07) tailored to Brasa Burger */
+.uiverse-cart-btn-v2 {
+  width: 135px;
+  height: 40px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #E52525;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  box-shadow: 0px 4px 16px rgba(229, 37, 37, 0.4);
+  position: relative;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .uiverse-cart-btn-v2 {
+    width: 105px;
+    height: 36px;
+  }
+}
+
+.uiverse-cart-btn-v2 .IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.uiverse-cart-btn-v2 .cart-icon {
+  width: 15px;
+  height: 15px;
+  color: #111111;
+}
+
+.uiverse-cart-btn-v2 .btn-text-v2 {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  z-index: 1;
+  transition: transform 0.4s ease;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.uiverse-cart-btn-v2:hover {
+  background-color: #CC1E1E;
+}
+
+.uiverse-cart-btn-v2:hover .IconContainer {
+  transform: translateX(54px);
+}
+
+.uiverse-cart-btn-v2:hover .btn-text-v2 {
+  transform: translate(12px, 0px);
+}
+
+.uiverse-cart-btn-v2:active {
+  transform: scale(0.95);
+}
